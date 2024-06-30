@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integrated Text and Audio Converter</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <div class="bg">
+      <h1>Integrated Text and Audio Converter</h1> 
+
+      <div class="not-bar">
+        <a href="index.html">About</a>
+      </div>
+      <div class="not-bar-1">
+        <a href="Contact.html">Contacts</a>
+      </div>
+  </div>
+
+  <!-- SHAPES -->
+  <div id="square"></div>
+  <div id="SQUARE"></div>
+  <div class="circle">
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+  </div>
+  <div class="rectangle">
+    <div class="content">
+      <h2 class="itac">ITAC</h2>
+      <h2 class="itac">ITAC</h2>
+    </div>
+  </div>
+  <div class="circle-1">
+    <div class="c1"></div>
+    <div class="c1"></div>
+    <div class="c1"></div>
+    <div class="c1"></div>
+    <div class="c1"></div>
+  </div>
+
+  <!-- TEXT TO SPEECH -->
+  <div class="T1">
+    <p style="font-size: 2.2em; font-weight: bolder;">Text to Speech</p>
+  </div>
+
+  <div class="container">
+    <div class="item-1">
+      <p style="font-size: 1em; text-transform: uppercase; word-spacing: 2px; letter-spacing: 4px; padding-top: 1%;">Uses text as an input and outputs it to audio</p>
+    </div>
+    
+    <div class="item-2">
+      <div id="play" class="input-container">
+        <input type="button" name="button">
+          <div class="button-tile">
+            <ion-icon name="play-circle-outline"></ion-icon>
+            <label for="play">Play</label>
+          </div>
+      </div>
+  
+      <div id="pause" class="input-container">
+        <input type="button" name="button">
+          <div class="button-tile">
+            <ion-icon name="pause-circle-outline"></ion-icon>
+            <label for="pause">Pause</label>
+          </div>
+      </div>
+  
+      <div id="resume" class="input-container">
+        <input type="button" name="button">
+          <div class="button-tile">
+            <ion-icon name="refresh-circle-outline"></ion-icon>
+            <label for="resume">Resume</label>
+          </div>
+      </div>
+  
+      <div id="stop" class="input-container">
+        <input type="button" name="radio">
+          <div class="button-tile">
+            <ion-icon name="stop-circle-outline"></ion-icon>
+            <label for="Stop">Stop</label>
+          </div>
+      </div>
+    </div>
+  
+    <div class="item-3">
+      <div class="sub-item-1">
+        <textarea id="text" class="text" placeholder="Text here..."></textarea>
+      </div>
+
+      <div class="sub-item-2">
+        <div id="zoomin" class="i-container">
+          <input type="button" name="button" onClick="zoomIn()">
+          <div class="button-tile">
+            <iconify-icon icon="bx:zoom-in"></iconify-icon>
+          </div>
+        </div>
+    
+        <div id="zoomout" class="i-container">
+          <input type="button" name="button" onClick="zoomOut()">
+          <div class="button-tile">
+            <iconify-icon id="zout" icon="material-symbols:zoom-out"></iconify-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-4">
+        <p id="instructions-tts">Press the <strong>Play Button</strong> to start <strong>Synthesizing the Text</strong></p>
+    </div>
+  </div>
+
+  <div class="tips">
+      <p style="font-size: 1.1em; font-weight: bold;">Quick Tips:</p>
+      <p>1. Input the text on the text box.</p>
+      <p>2. Click the appropriate button for different uses.</p>
+  </div>
+
+  <!-- SPEECH TO TEXT -->
+  <div class="T2">
+    <p style="font-size: 2.2em; font-weight: bolder;">Speech to Text</p>
+  </div>
+
+  <div class="CONTAINER">
+    <div class="item-1">
+      <p style="font-size: 1em; text-transform: uppercase; word-spacing: 2px; letter-spacing: 4px; padding-top: 1%;">Uses audio as an input and outputs it to text</p>
+    </div>
+    
+    <div class="item-2">
+      <div id="record" class="input-container">
+        <input type="button" name="button">
+         <div class="button-tile">
+             <ion-icon name="mic-circle-outline"></ion-icon>
+             <label for="record">Record</label>
+         </div>
+     </div>
+ 
+     <div id="stopspeech" class="input-container">
+       <input type="button" name="radio">
+       <div class="button-tile">
+           <ion-icon name="stop-circle-outline"></ion-icon>
+           <label for="Stop">Stop</label>
+       </div>
+     </div>
+    </div>
+  
+    <div class="item-3">
+      <div class="sub-item-1">
+        <textarea id="text-area" class="text" placeholder="Text here..."></textarea>
+      </div>
+
+      <div class="sub-item-2">
+        <div id="zoomin" class="i-container">
+          <input type="button" name="button" onClick="zoomin()">
+          <div class="button-tile">
+            <iconify-icon icon="bx:zoom-in"></iconify-icon>
+          </div>
+        </div>
+    
+        <div id="zoomout" class="i-container">
+          <input type="button" name="button" onClick="zoomout()">
+          <div class="button-tile">
+            <iconify-icon id="zout" icon="material-symbols:zoom-out"></iconify-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-4">
+      <p id="instructions-stt">Press the <strong>Record Button</strong> to start the <strong>Speech Recognition</strong></p>
+    </div>
+  </div>
+
+  <div class="TIPS">
+      <p style="font-size: 1.1em; font-weight: bold;">Quick Tips:</p>
+      <p>1. Click the microphone button and speak to record speech.</p>
+      <p>2. Recorded speech will appear as text in the text bar.</p>
+  </div>
+
+  <div class="BG"></div>
+
+  <div class="fbg">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+    </svg>
+  </div>
+  
+  <!-- JAVASCRIPT -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+</body>
+</html>
